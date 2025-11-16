@@ -1,0 +1,56 @@
+$cor__header: #a71370;
+$cor__borda__linha: #c4589c;
+$cor__branca: #f8f8f8;
+$cor__preta: #333;
+
+.balanco__parcial__mensal__container{
+    margin-top: 15px;
+    width: 100dvw;
+    height: auto;
+    padding: 0 15px;
+}
+
+.balanco__parcial__mensal__wrapper{
+    background-color: $cor__branca;
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+.balanco__parcial__mensal__wrapper > h2{
+    color: #a19a9a;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.balanco__e__custos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.balanco__e__custos > .balanco > h3{
+    font-size: 24px;
+}
+
+.balanco__e__custos > .custos > h3{
+    font-size: 13px;
+    color: #a19a9a;
+    text-align: right;
+}
+
+.entradas__e__sinal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.entradas__e__sinal > .entradas > h3{
+    font-size: 13px;
+    color: #a19a9a;
+}
+
+.entradas__e__sinal > .sinal > svg{
+    width: 20px;
+    height: 20px;
+}

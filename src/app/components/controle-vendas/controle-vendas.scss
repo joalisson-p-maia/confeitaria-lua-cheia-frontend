@@ -1,0 +1,75 @@
+$cor__header: #a71370;
+$cor__borda__linha: #c4589c;
+$cor__branca: #f8f8f8;
+$cor__preta: #333;
+
+.controle__vendas__container{
+    margin-top: 15px;
+    width: 100dvw;
+    height: auto;
+    padding: 0 15px;
+}
+
+.controle__vendas__wrapper{
+    background-color: $cor__branca;
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+.controle__vendas__wrapper > h2{
+    color: #333;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.controle__vendas__porcentagem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d99c;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.controle__vendas__porcentagem__unica{
+    padding: 15px 23px;
+}
+
+.controle__vendas__porcentagem__unica > .linhas{
+    display: flex;
+    flex-direction: row;
+}
+
+.linhas > .linha__1,
+.linhas > .linha__2{
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+}
+
+.linhas > .linha__2{
+    margin-left: 4px;
+}
+
+.controle__vendas__porcentagem__unica > h3{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.controle__vendas__porcentagem__linha{
+    width: 1px;
+    height: 40px;
+    background-color: #3333;
+    position: relative;
+    top: 5px;
+}
+
+.controle__vendas__wrapper > h3{
+    font-size: 14px;
+    color: #a19a9a;
+    margin-top: 15px;
+}

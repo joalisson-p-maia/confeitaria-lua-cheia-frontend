@@ -1,0 +1,79 @@
+$cor__header: #a71370;
+$cor__borda__linha: #c4589c;
+$cor__branca: #f8f8f8;
+$cor__preta: #333;
+
+.catalogo__container{
+    margin-top: 130px;
+    width: 100dvw;
+    height: auto;
+    padding: 0 20px;
+}
+
+.catalogo__container > h2{
+    font-size: 27px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.catalogo__caixa{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.botoes__acao{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.botoes__acao > button:first-child{
+    margin-right: 8px;
+}
+
+.botoes__acao > button{
+    font-size: 21px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid $cor__borda__linha;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.catalogo__confeitaria{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    margin-top: 60px;
+}
+
+.catalogo__confeitaria__unico{
+    width: 180px;
+    height: 120px;
+    background-color: $cor__preta;
+    margin-right: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.catalogo__confeitaria__unico > h3{
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    color: $cor__branca;
+    z-index: 900;
+    font-size: 14px;
+}
+
+.catalogo__confeitaria__unico > h4{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: $cor__branca;
+    z-index: 900;
+    font-size: 12px;
+}

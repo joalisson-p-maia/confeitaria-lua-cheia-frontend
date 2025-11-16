@@ -1,0 +1,49 @@
+$cor__preta: #333;
+$cor__branca: #f8f8f8;
+$cor__header: #B43E89;
+
+.introducao__container{
+    margin-top: 130px;
+    padding: 0 20px;
+}
+
+.introducao__titulo{
+    text-align: right;
+}
+
+.introducao__titulo > h2{
+    font-size: 27px;
+    font-weight: 500;
+    color: #333;
+}
+
+.introducao__titulo > h3{
+    font-size: 21px;
+    font-weight: 400;
+    color: #333;
+}
+
+.introducao__container > button[type=button]{
+    margin-top: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $cor__header;
+    color: $cor__branca;
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+    border: 0;
+    font-size: 17px;
+    font-weight: 500;
+    transition: background-color 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.introducao__container > button[type=button]:hover{
+    background-color: #b43e89a2;
+}
+
+.introducao__container > button[type=button]:active{
+    top: 1px;
+}
