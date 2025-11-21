@@ -1,0 +1,30 @@
+<div class="balanco__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Balanço Mensal</h2>
+
+    <div class="column">
+      <label>Mês:</label>
+      <input type="number" [(ngModel)]="mes">
+
+      <label>Ano:</label>
+      <input type="number" [(ngModel)]="ano">
+
+      <button class="btn" (click)="pesquisar()">Pesquisar</button>
+    </div>
+
+    <div class="resultado" *ngIf="resultado">
+      <h3>Resultado</h3>
+      <p>Total de vendas: {{ resultado.totalVendas | currency:'BRL' }}</p>
+      <p>Gastos com insumos: {{ resultado.totalGastos | currency:'BRL' }}</p>
+      <p>Lucro: {{ resultado.lucro | currency:'BRL' }}</p>
+    </div><!--resultado-->
+  </main>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--balanco__container-->

@@ -1,0 +1,38 @@
+<div class="insumo__list__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Insumos</h2>
+
+    <a routerLink="/insumos/novo" class="btn">Novo Insumo</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Unidade</th>
+          <th>Preço (R$)</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of insumos">
+          <td>{{ i.nome }}</td>
+          <td>{{ i.quantidade }}</td>
+          <td>{{ i.unidade }}</td>
+          <td>{{ i.preco | currency:'BRL' }}</td>
+          <td>
+            <a [routerLink]="['/insumos/editar', i.id]" class="btn-sm">Editar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

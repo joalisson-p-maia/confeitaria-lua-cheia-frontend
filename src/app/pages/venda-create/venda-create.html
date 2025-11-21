@@ -1,0 +1,30 @@
+<div class="venda__create__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Registrar Venda</h2>
+
+    <form (ngSubmit)="salvar()">
+
+      <label>ID da Encomenda:</label>
+      <input type="number" [(ngModel)]="form.encomendaId" name="encomendaId">
+
+      <label>Quantidade:</label>
+      <input type="number" [(ngModel)]="form.quantidade" name="quantidade">
+
+      <label>Data:</label>
+      <input type="date" [(ngModel)]="form.data" name="data">
+
+      <label>Total:</label>
+      <input type="number" [(ngModel)]="form.total" name="total">
+
+      <button class="btn">Salvar</button>
+    </form>
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--venda__create__container-->

@@ -1,0 +1,32 @@
+import { Component } from '@angular/core';
+import { EncomendasService } from '../../services/encomendas';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Header } from '../../shared/header/header';
+import { Footer } from '../../shared/footer/footer';
+
+@Component({
+  selector: 'app-encomenda-create',
+  imports: [
+    CommonModule,
+    FormsModule,
+    Header,
+    Footer
+  ],
+  templateUrl: './encomenda-create.html',
+  styleUrl: './encomenda-create.scss',
+})
+export class EncomendaCreate {
+  form = {
+    nome: '',
+    preco: 0,
+    imagem: '',
+    insumos: []
+  };
+
+  constructor(private service: EncomendasService) {}
+
+  salvar() {
+    this.service.criar(this.form).subscribe();
+  }
+}

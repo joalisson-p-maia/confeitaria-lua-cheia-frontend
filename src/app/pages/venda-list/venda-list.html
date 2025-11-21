@@ -1,0 +1,34 @@
+<div class="venda__list__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Vendas</h2>
+
+    <a routerLink="/vendas/novo" class="btn">Registrar Venda</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Encomenda</th>
+          <th>Quantidade</th>
+          <th>Data</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v of vendas">
+          <td>{{ v.encomendaId }}</td>
+          <td>{{ v.quantidade }}</td>
+          <td>{{ v.data | date }}</td>
+          <td>{{ v.total | currency:'BRL' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--venda__list__container-->

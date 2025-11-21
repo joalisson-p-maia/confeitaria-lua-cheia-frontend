@@ -1,0 +1,29 @@
+<div class="insumo__create__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Novo Insumo</h2>
+
+    <form (ngSubmit)="salvar()">
+      <label>Nome:</label>
+      <input type="text" [(ngModel)]="form.nome" name="nome" required>
+
+      <label>Quantidade:</label>
+      <input type="number" [(ngModel)]="form.quantidade" name="quantidade" required>
+
+      <label>Unidade:</label>
+      <input type="text" [(ngModel)]="form.unidade" name="unidade" required>
+
+      <label>Preço:</label>
+      <input type="number" step="0.01" [(ngModel)]="form.preco" name="preco" required>
+
+      <button class="btn">Salvar</button>
+    </form>  
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--insumo__create__container-->

@@ -1,0 +1,41 @@
+$cor__rosa__body: #E8BECF;
+
+.insumo__list__container {
+  background-color: $cor__rosa__body;
+  height: 100dvh; 
+}
+
+main{
+  padding: 50px 20px;
+  position: relative;
+}
+
+main > a{
+  position: absolute;
+  top: 45px;
+  right: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn, .btn-sm {
+  background: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-sm {
+  padding: 5px 8px;
+  background: #3e8e41;
+}

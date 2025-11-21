@@ -1,0 +1,26 @@
+$cor__rosa__body: #E8BECF;
+
+.venda__list__container {
+  background-color: $cor__rosa__body;
+  height: 100dvh;
+}
+
+main{
+  padding: 50px 20px 0 20px;
+}
+
+main > a{
+  position: relative;
+  top: 20px;
+}
+
+table {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}

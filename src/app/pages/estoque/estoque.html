@@ -1,0 +1,30 @@
+<div class="estoque__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Estoque</h2>
+
+    <a routerLink="/estoque/movimentacao" class="btn">Registrar Movimentação</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Insumo</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of lista">
+          <td>{{ item.insumo }}</td>
+          <td>{{ item.quantidade }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--estoque__container-->

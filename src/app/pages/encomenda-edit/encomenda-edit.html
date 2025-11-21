@@ -1,0 +1,26 @@
+<div class="encomenda__edit__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Editar Encomenda</h2>
+
+    <form (ngSubmit)="salvar()">
+      <label>Nome:</label>
+      <input type="text" [(ngModel)]="form.nome" name="nome">
+
+      <label>Preço:</label>
+      <input type="number" [(ngModel)]="form.preco" name="preco">
+
+      <label>URL da Imagem:</label>
+      <input type="text" [(ngModel)]="form.imagem" name="imagem">
+
+      <button class="btn">Salvar Alterações</button>
+    </form>
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--encomenda__edit__container-->

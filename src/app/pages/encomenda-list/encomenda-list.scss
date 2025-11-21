@@ -1,0 +1,36 @@
+$cor__rosa__body: #E8BECF;
+
+.encomendas__container {
+  background-color: $cor__rosa__body;
+  height: 100dvh;
+}
+
+main{
+  padding: 50px 20px 0 20px;
+}
+
+a.btn{
+  position: relative;
+  top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}

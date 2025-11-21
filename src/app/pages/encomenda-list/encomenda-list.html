@@ -1,0 +1,26 @@
+<div class="encomendas__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Catálogo de Encomendas</h2>
+
+    <a routerLink="/encomendas/novo" class="btn">Nova Encomenda</a>
+
+    <div class="grid">
+      <div class="card" *ngFor="let e of lista">
+        <img [src]="e.imagem" alt="Imagem" />
+
+        <h3>{{ e.nome }}</h3>
+        <p>Preço: {{ e.preco | currency:'BRL' }}</p>
+
+        <a class="btn-sm" [routerLink]="['/encomendas/editar', e.id]">Editar</a>
+      </div><!--card-->
+    </div><!--grid-->
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--encomendas__container-->

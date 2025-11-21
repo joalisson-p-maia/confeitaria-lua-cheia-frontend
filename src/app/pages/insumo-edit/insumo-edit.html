@@ -1,0 +1,19 @@
+<div class="insumo__edit__container">
+  <h2>Editar Insumo</h2>
+
+  <form (ngSubmit)="salvar()">
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="form.nome" name="nome">
+
+    <label>Quantidade:</label>
+    <input type="number" [(ngModel)]="form.quantidade" name="quantidade">
+
+    <label>Unidade:</label>
+    <input type="text" [(ngModel)]="form.unidade" name="unidade">
+
+    <label>Preço:</label>
+    <input type="number" [(ngModel)]="form.preco" name="preco">
+
+    <button class="btn">Salvar Alterações</button>
+  </form>
+</div>

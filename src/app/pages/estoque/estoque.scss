@@ -1,0 +1,26 @@
+$cor__rosa__body: #E8BECF;
+
+.estoque__container {
+  background-color: $cor__rosa__body;
+  height: 100dvh;
+}
+
+main{
+  padding: 50px 20px 0 20px;
+}
+
+main > a{
+  position: relative;
+  top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+
+td, th {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}

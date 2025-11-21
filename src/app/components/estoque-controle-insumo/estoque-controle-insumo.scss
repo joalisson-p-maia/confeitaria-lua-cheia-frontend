@@ -1,0 +1,59 @@
+$cor__header: #a71370;
+$cor__borda__linha: #c4589c;
+$cor__branca: #f8f8f8;
+$cor__preta: #333;
+
+.estoque__controle__insumo__container{
+    margin-top: 15px;
+    width: 100dvw;
+    height: auto;
+    padding: 0 15px;
+}
+
+.estoque__controle__insumo__wrapper{
+    background-color: $cor__branca;
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+.estoque__controle__insumo__wrapper > h2{
+    color: #333;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.estoque__controle__insumo__caixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px,1fr));
+}
+
+.estoque__controle__insumo__unico{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.estoque__controle__insumo__unico:nth-child(1),
+.estoque__controle__insumo__unico:nth-child(2){
+    margin-bottom: 25px;
+}
+
+.estoque__controle__insumo__unico > svg{
+    width: 45px;
+    height: 45px;
+}
+
+.nome__quantidade{
+    margin-left: 15px;
+}
+
+.nome__quantidade > h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+}
+
+.nome__quantidade > h3:first-child{
+    margin-bottom: 5px;
+}

@@ -1,0 +1,30 @@
+<div class="estoque__movimentacao__create__container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <h2>Registrar Movimentação</h2>
+
+    <form (ngSubmit)="salvar()">
+
+      <label>ID do Insumo:</label>
+      <input type="number" [(ngModel)]="form.insumoId" name="insumoId" required>
+
+      <label>Quantidade:</label>
+      <input type="number" [(ngModel)]="form.quantidade" name="quantidade" required>
+
+      <label>Tipo:</label>
+      <select [(ngModel)]="form.tipo" name="tipo">
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+
+      <button class="btn">Registrar</button>
+    </form>
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--estoque__movimentacao__create__container-->

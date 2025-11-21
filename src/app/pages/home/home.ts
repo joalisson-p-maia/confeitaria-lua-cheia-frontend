@@ -1,14 +1,12 @@
+import { ControleInsumo } from './../../components/controle-insumo/controle-insumo';
+import { ControleVendas } from './../../components/controle-vendas/controle-vendas';
+import { EstoqueControleInsumo } from './../../components/estoque-controle-insumo/estoque-controle-insumo';
+import { BalancoParcialMensal } from './../../components/balanco-parcial-mensal/balanco-parcial-mensal';
 import { Component } from '@angular/core';
 import { Header } from '../../shared/header/header';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Introducao } from '../../components/introducao/introducao';
-import { Catalogo } from '../catalogo/catalogo';
-import { EstoqueControleInsumo } from '../estoque-controle-insumo/estoque-controle-insumo';
-import { BalancoParcialMensal } from '../balanco-parcial-mensal/balanco-parcial-mensal';
-import { ControleInsumo } from '../controle-insumo/controle-insumo';
 import { Footer } from '../../shared/footer/footer';
-import { ControleVendas } from '../../components/controle-vendas/controle-vendas';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +14,9 @@ import { ControleVendas } from '../../components/controle-vendas/controle-vendas
     CommonModule,
     Header,
     RouterModule,
-    Catalogo,
     EstoqueControleInsumo,
     BalancoParcialMensal,
+    EstoqueControleInsumo,
     ControleInsumo,
     Footer,
     ControleVendas
