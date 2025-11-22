@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BalancoService {
 
-  private api = 'http://localhost:3000/balanco';
+  private api = 'http://localhost:3000/api/balanco';
 
   constructor(private http: HttpClient) {}
 

@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class EstoqueService {
 
-  private api = 'http://localhost:3000/estoque';
+  private api = 'http://localhost:3000/api/estoque';
 
   constructor(private http: HttpClient) {}
 
   obterEstoque(): Observable<any[]> {
-    return this.http.get<any[]>(this.api);
+    return this.http.get<any[]>(this.api + '/listar');
   }
 
   registrarMovimentacao(data: any): Observable<any> {

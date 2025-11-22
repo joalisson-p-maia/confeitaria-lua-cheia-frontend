@@ -8,23 +8,23 @@ import { Venda } from '../interfaces/venda.interface';
 })
 export class VendasService {
 
-  private api = 'http://localhost:3000/vendas';
+  private api = 'http://localhost:3000/api/vendas';
 
   constructor(private http: HttpClient) {}
 
   listar(): Observable<Venda[]> {
-    return this.http.get<Venda[]>(this.api);
+    return this.http.get<Venda[]>(this.api + '/listar');
   }
 
   listarPorMes(mes: number, ano: number): Observable<Venda[]> {
-    return this.http.get<Venda[]>(`${this.api}?mes=${mes}&ano=${ano}`);
+    return this.http.get<Venda[]>(`${this.api}/listar?mes=${mes}&ano=${ano}`);
   }
 
   obterPorId(id: number): Observable<Venda> {
-    return this.http.get<Venda>(`${this.api}/${id}`);
+    return this.http.get<Venda>(`${this.api}/buscar/${id}`);
   }
 
   criar(data: Venda): Observable<Venda> {
-    return this.http.post<Venda>(this.api, data);
+    return this.http.post<Venda>(this.api + '/criar', data);
   }
 }
