@@ -20,7 +20,7 @@ export class InsumoCreate {
   form = {
     nome: '',
     quantidade: 0,
-    unidade: '',
+    unidadeMedida: '',
     preco: 0
   };
 
