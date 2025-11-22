@@ -24,6 +24,11 @@ export class EncomendaList {
   constructor(private service: EncomendasService) {}
 
   ngOnInit(): void {
-    this.service.listar().subscribe(r => this.lista = r);
+    this.service.listar().subscribe({
+      next: (res) => {
+        console.log(res);
+        this.lista = res;
+      }
+    });
   }
 }

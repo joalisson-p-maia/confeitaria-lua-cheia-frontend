@@ -24,6 +24,12 @@ export class VendaList {
   constructor(private service: VendasService) {}
 
   ngOnInit(): void {
-    this.service.listar().subscribe(r => this.vendas = r);
+    this.service.listar().subscribe({
+      next: (res) => {
+        console.log(res);
+
+        this.vendas = res;
+      }
+    });
   }
 }

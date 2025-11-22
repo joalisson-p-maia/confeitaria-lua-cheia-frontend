@@ -3,12 +3,16 @@ import { InsumosService } from '../../services/insumos';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Header } from '../../shared/header/header';
+import { Footer } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-insumo-edit',
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    Header,
+    Footer
   ],
   templateUrl: './insumo-edit.html',
   styleUrl: './insumo-edit.scss',
@@ -27,6 +31,14 @@ export class InsumoEdit {
   }
 
   salvar() {
-    this.service.editar(this.form.id, this.form).subscribe();
+    this.service.editar(this.form.id, this.form).subscribe({
+      next: (res) => {
+        console.log(res);
+
+        setTimeout(() => {
+          window.location.href = "/insumos";
+        }, 2000);
+      }
+    });
   }
 }

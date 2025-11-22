@@ -24,6 +24,12 @@ export class Estoque {
   constructor(private service: EstoqueService) {}
 
   ngOnInit(): void {
-    this.service.obterEstoque().subscribe(r => this.lista = r);
+    this.service.obterEstoque().subscribe({
+      next: (res) => {
+        console.log(res);
+
+        this.lista = res;
+      }
+    });
   }
 }

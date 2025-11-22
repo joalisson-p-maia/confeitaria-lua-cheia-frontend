@@ -27,6 +27,12 @@ export class InsumoCreate {
   constructor(private service: InsumosService) {}
 
   salvar() {
-    this.service.criar(this.form).subscribe();
+    this.service.criar(this.form).subscribe({
+      next: (res) => {
+        setTimeout(() => {
+          window.location.href = "/insumos";
+        }, 2000);
+      }
+    });
   }
 }

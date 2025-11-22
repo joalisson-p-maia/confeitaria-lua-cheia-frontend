@@ -22,6 +22,9 @@ export class InsumoList {
   constructor(private service: InsumosService) {}
 
   ngOnInit(): void {
-    this.service.listar().subscribe(res => this.insumos = res);
+    this.service.listar().subscribe(res => {
+      console.log(res);
+      this.insumos = res
+    });
   }
 }

@@ -26,6 +26,14 @@ export class EstoqueMovimentacaoCreate {
   constructor(private service: EstoqueService) {}
 
   salvar() {
-    this.service.registrarMovimentacao(this.form).subscribe();
+    this.service.registrarMovimentacao(this.form).subscribe({
+      next: (res) => {
+        console.log(res);
+
+        setTimeout(() => {
+          window.location.href = "/estoque";
+        }, 2000);
+      }
+    });
   }
 }

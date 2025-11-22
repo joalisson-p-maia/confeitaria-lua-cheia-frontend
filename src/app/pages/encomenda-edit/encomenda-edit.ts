@@ -31,6 +31,14 @@ export class EncomendaEdit {
   }
 
   salvar() {
-    this.service.editar(this.form.id, this.form).subscribe();
+    this.service.editar(this.form.id, this.form).subscribe({
+      next: (res) => {
+        console.log(res);
+
+        setTimeout(() => {
+          window.location.href = "/encomendas";
+        }, 2000);
+      }
+    });
   }
 }

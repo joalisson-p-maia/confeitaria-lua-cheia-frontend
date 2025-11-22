@@ -25,6 +25,10 @@ export class Balanco {
 
   pesquisar() {
     this.service.obterBalanco(this.mes, this.ano)
-      .subscribe(r => this.resultado = r);
+      .subscribe({
+        next: (res) => {
+          this.resultado = res;
+        }
+      });
   }
 }

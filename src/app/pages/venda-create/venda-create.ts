@@ -28,6 +28,14 @@ export class VendaCreate {
   constructor(private service: VendasService) {}
 
   salvar() {
-    this.service.criar(this.form).subscribe();
+    this.service.criar(this.form).subscribe({
+      next: (res) => {
+        console.log(res);
+
+        setTimeout(() => {
+          window.location.href = "/vendas";
+        }, 2000);
+      }
+    });
   }
 }

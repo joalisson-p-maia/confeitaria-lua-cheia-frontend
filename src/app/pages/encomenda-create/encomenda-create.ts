@@ -27,6 +27,14 @@ export class EncomendaCreate {
   constructor(private service: EncomendasService) {}
 
   salvar() {
-    this.service.criar(this.form).subscribe();
+    this.service.criar(this.form).subscribe({
+      next: (res) => {
+        console.log(res);
+
+        setTimeout(() => {
+          window.location.href = "/encomendas";
+        }, 2000);
+      }
+    });
   }
 }
