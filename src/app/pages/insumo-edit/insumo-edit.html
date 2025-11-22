@@ -1,19 +1,29 @@
 <div class="insumo__edit__container">
-  <h2>Editar Insumo</h2>
+  <header>
+    <app-header></app-header>
+  </header>
 
-  <form (ngSubmit)="salvar()">
-    <label>Nome:</label>
-    <input type="text" [(ngModel)]="form.nome" name="nome">
+  <main>
+    <h2>Editar Insumo</h2>
 
-    <label>Quantidade:</label>
-    <input type="number" [(ngModel)]="form.quantidade" name="quantidade">
+    <form (ngSubmit)="salvar()">
+      <label>Nome:</label>
+      <input type="text" [(ngModel)]="form.nome" name="nome">
 
-    <label>Unidade:</label>
-    <input type="text" [(ngModel)]="form.unidade" name="unidade">
+      <label>Quantidade:</label>
+      <input type="number" [(ngModel)]="form.quantidade" name="quantidade">
 
-    <label>Preço:</label>
-    <input type="number" [(ngModel)]="form.preco" name="preco">
+      <label>Unidade:</label>
+      <input type="text" [(ngModel)]="form.unidade" name="unidade">
 
-    <button class="btn">Salvar Alterações</button>
-  </form>
-</div>
+      <label>Preço:</label>
+      <input type="number" [(ngModel)]="form.preco" name="preco">
+
+      <button class="btn">Salvar Alterações</button>
+    </form>
+  </main>
+  
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--insumo__edit__container-->
