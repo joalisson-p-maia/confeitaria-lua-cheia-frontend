@@ -12,7 +12,7 @@
       <thead>
         <tr>
           <th>Nome</th>
-          <th>Quantidade</th>
+          <th>Qtde</th>
           <th>Unidade</th>
           <th>Preço (R$)</th>
           <th></th>
@@ -22,10 +22,10 @@
         <tr *ngFor="let i of insumos">
           <td>{{ i.nome }}</td>
           <td>{{ i.quantidade }}</td>
-          <td>{{ i.unidade }}</td>
+          <td>{{ i.unidadeMedida }}</td>
           <td>{{ i.preco | currency:'BRL' }}</td>
           <td>
-            <a [routerLink]="['/insumos/editar', i.id]" class="btn-sm">Editar</a>
+            <a [routerLink]="['/insumos/editar', i._id]" class="btn-sm">Editar</a>
           </td>
         </tr>
       </tbody>
