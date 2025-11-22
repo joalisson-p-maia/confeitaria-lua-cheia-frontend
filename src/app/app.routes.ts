@@ -10,6 +10,7 @@ import { EstoqueMovimentacaoCreate } from './pages/estoque-movimentacao-create/e
 import { VendaList } from './pages/venda-list/venda-list';
 import { VendaCreate } from './pages/venda-create/venda-create';
 import { Balanco } from './pages/balanco/balanco';
+import { InsumoEdit } from './pages/insumo-edit/insumo-edit';
 
 export const routes: Routes = [
     {
@@ -29,8 +30,8 @@ export const routes: Routes = [
         component: InsumoCreate 
     },
     { 
-        path: 'insumos/:id/editar', 
-        component: InsumoList 
+        path: 'insumos/editar/:id', 
+        component: InsumoEdit 
     },
     { 
         path: 'encomendas', 
@@ -41,7 +42,7 @@ export const routes: Routes = [
         component: EncomendaCreate 
     },
     { 
-        path: 'encomendas/:id/editar', 
+        path: 'encomendas/editar/:id', 
         component: EncomendaEdit 
     },
     { 
