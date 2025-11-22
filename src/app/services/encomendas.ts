@@ -8,7 +8,7 @@ import { Encomenda } from '../interfaces/encomenda.interface';
 })
 export class EncomendasService {
 
-  private api = 'http://localhost:3000/api/encomendas';
+  private api = 'https://confeitaria-lua-cheia-backend.onrender.com/api/encomendas';
 
   constructor(private http: HttpClient) {}
 

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EstoqueService {
 
-  private api = 'http://localhost:3000/api/estoque';
+  private api = 'https://confeitaria-lua-cheia-backend.onrender.com/api/estoque';
 
   constructor(private http: HttpClient) {}
 

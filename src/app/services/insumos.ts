@@ -8,7 +8,7 @@ import { Insumo } from '../interfaces/insumo.interface';
 })
 export class InsumosService {
 
-  private api = 'http://localhost:3000/api/insumos';
+  private api = 'https://confeitaria-lua-cheia-backend.onrender.com/api/insumos';
 
   constructor(private http: HttpClient) {}
 

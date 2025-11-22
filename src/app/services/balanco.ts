@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BalancoService {
 
-  private api = 'http://localhost:3000/api/balanco';
+  private api = 'https://confeitaria-lua-cheia-backend.onrender.com/api/balanco';
 
   constructor(private http: HttpClient) {}
 
