@@ -8,8 +8,13 @@
 
     <form (ngSubmit)="salvar()">
 
-      <label>ID do Insumo:</label>
-      <input type="number" [(ngModel)]="form.insumoId" name="insumoId" required>
+      <label>Nome Insumo:</label>
+      <select name="" id="">
+        <option value="">Selecione uma opção</option>
+        @for (insumo of listaInsumos; track $index) {
+          <option [value]="insumo.nome">{{ insumo.nome }}</option>
+        }
+      </select>
 
       <label>Quantidade:</label>
       <input type="number" [(ngModel)]="form.quantidade" name="quantidade" required>
