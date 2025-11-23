@@ -20,7 +20,6 @@ export class EncomendaCreate {
   form = {
     nome: '',
     preco: 0,
-    imagem: '',
     insumos: []
   };
 
