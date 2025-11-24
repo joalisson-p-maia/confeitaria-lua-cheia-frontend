@@ -6,14 +6,14 @@
   <main>
     <h2>Catálogo de Encomendas</h2>
 
-    <a routerLink="/encomendas/novo" class="btn">Nova Encomenda</a>
+    <button type="button" routerLink="/encomendas/novo" class="btn">Nova Encomenda</button>
 
     <div class="grid">
       <div class="card" *ngFor="let e of lista">
         <h3>{{ e.nome }}</h3>
         <p>Preço: {{ e.preco | currency:'BRL' }}</p>
 
-        <a class="btn-sm" [routerLink]="['/encomendas/editar', e.id]">Editar</a>
+        <button type="button" class="btn-sm" [routerLink]="['/encomendas/editar/', e._id]">Editar</button>
       </div><!--card-->
     </div><!--grid-->
   </main>

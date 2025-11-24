@@ -2,39 +2,12 @@
     <div class="controle__vendas__wrapper">
         <h2>Controle de Vendas</h2>
 
-        <div class="controle__vendas__porcentagem">
-            <div class="controle__vendas__porcentagem__unica">
-                <div class="linhas">
-                    <div class="linha__1"></div>
-                    <div class="linha__2"></div>
-                </div><!--linhas-->
+        <div class="controle__vendas__caixa">
+            <h3>Quantas vendas nesse mês?</h3>
+            
+            <h4>{{ quantidadeVendaMes }}</h4>
+        </div><!--controle__vendas__caixa-->
 
-                <h3>75%</h3>
-            </div><!--controle__vendas__porcentagem__unica-->
-
-            <div class="controle__vendas__porcentagem__linha"></div>
-
-            <div class="controle__vendas__porcentagem__unica">
-                <div class="linhas">
-                    <div class="linha__1"></div>
-                    <div class="linha__2"></div>
-                </div><!--linhas-->
-
-                <h3>80%</h3>
-            </div><!--controle__vendas__porcentagem__unica-->
-
-            <div class="controle__vendas__porcentagem__linha"></div>
-
-            <div class="controle__vendas__porcentagem__unica">
-                <div class="linhas">
-                    <div class="linha__1"></div>
-                    <div class="linha__2"></div>
-                </div><!--linhas-->
-
-                <h3>30%</h3>
-            </div><!--controle__vendas__porcentagem__unica-->
-        </div><!--controle__vendas__porcentagem-->
-
-        <h3>Vendas Mês: R$ 1.189,00</h3>
+        <h3>Vendas Mês: R$ {{ valorTotalVendas }}</h3>
     </div><!--controle__vendas__wrapper-->
 </div><!--controle__vendas__container-->

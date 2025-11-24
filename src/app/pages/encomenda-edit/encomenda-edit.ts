@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { EncomendasService } from '../../services/encomendas';
 import { Header } from '../../shared/header/header';
 import { Footer } from '../../shared/footer/footer';
@@ -12,7 +12,8 @@ import { Footer } from '../../shared/footer/footer';
     CommonModule,
     FormsModule,
     Header,
-    Footer
+    Footer,
+    RouterModule
   ],
   templateUrl: './encomenda-edit.html',
   styleUrl: './encomenda-edit.scss',
@@ -26,8 +27,10 @@ export class EncomendaEdit {
   ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.service.obterPorId(id).subscribe(res => this.form = res);
+    const id = this.route.snapshot.paramMap.get('id');
+    if(id){
+      this.service.obterPorId(id).subscribe(res => this.form = res);
+    }
   }
 
   salvar() {

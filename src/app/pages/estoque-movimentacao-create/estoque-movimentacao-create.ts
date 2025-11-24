@@ -5,6 +5,7 @@ import { EstoqueService } from '../../services/estoque';
 import { Header } from '../../shared/header/header';
 import { Footer } from '../../shared/footer/footer';
 import { InsumosService } from '../../services/insumos';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-estoque-movimentacao-create',
@@ -12,7 +13,8 @@ import { InsumosService } from '../../services/insumos';
     CommonModule,
     FormsModule,
     Header,
-    Footer
+    Footer,
+    RouterModule
   ],
   templateUrl: './estoque-movimentacao-create.html',
   styleUrl: './estoque-movimentacao-create.scss',

@@ -24,28 +24,23 @@ $cor__preta: #333;
 }
 
 .estoque__controle__insumo__caixa{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px,1fr));
+    display: flex;
+    flex-direction: column;
 }
 
 .estoque__controle__insumo__unico{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.estoque__controle__insumo__unico:nth-child(1),
-.estoque__controle__insumo__unico:nth-child(2){
-    margin-bottom: 25px;
-}
-
-.estoque__controle__insumo__unico > svg{
-    width: 45px;
-    height: 45px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $cor__borda__linha;
 }
 
 .nome__quantidade{
-    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .nome__quantidade > h3{
@@ -56,4 +51,15 @@ $cor__preta: #333;
 
 .nome__quantidade > h3:first-child{
     margin-bottom: 5px;
+}
+
+.estoque__controle__insumo__wrapper > button{
+    position: relative;
+    margin-top: 30px;
+    left: 80%;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #a19a9a;
+    background-color: transparent;
+    border: 0;
 }

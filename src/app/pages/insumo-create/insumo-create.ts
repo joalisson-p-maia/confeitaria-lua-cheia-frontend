@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { InsumosService } from '../../services/insumos';
 import { Header } from '../../shared/header/header';
 import { Footer } from '../../shared/footer/footer';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-insumo-create',
@@ -11,7 +12,8 @@ import { Footer } from '../../shared/footer/footer';
     CommonModule,
     FormsModule,
     Header,
-    Footer
+    Footer,
+    RouterModule
   ],
   templateUrl: './insumo-create.html',
   styleUrl: './insumo-create.scss',

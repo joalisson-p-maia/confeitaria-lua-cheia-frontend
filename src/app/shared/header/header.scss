@@ -16,6 +16,7 @@ $cor__parcial__hover: #8888;
     @include display__flex__row__justify();
     padding: 10px 20px;
     background-color: $cor__branca;
+    max-width: 100dvw;
 }
 
 .header__container > a > img{

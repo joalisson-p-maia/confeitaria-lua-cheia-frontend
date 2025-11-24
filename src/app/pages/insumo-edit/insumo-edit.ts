@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { InsumosService } from '../../services/insumos';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Header } from '../../shared/header/header';
@@ -12,8 +12,9 @@ import { Footer } from '../../shared/footer/footer';
     CommonModule,
     FormsModule,
     Header,
-    Footer
-  ],
+    Footer,
+    RouterLink
+],
   templateUrl: './insumo-edit.html',
   styleUrl: './insumo-edit.scss',
 })

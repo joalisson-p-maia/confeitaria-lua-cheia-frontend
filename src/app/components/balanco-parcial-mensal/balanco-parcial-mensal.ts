@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BalancoService } from '../../services/balanco';
 
 @Component({
   selector: 'app-balanco-parcial-mensal',
@@ -6,6 +7,26 @@ import { Component } from '@angular/core';
   templateUrl: './balanco-parcial-mensal.html',
   styleUrl: './balanco-parcial-mensal.scss',
 })
-export class BalancoParcialMensal {
+export class BalancoParcialMensal implements OnInit{
+  custoTotal: number = 0;
+  totalVendas: number = 0;
 
+  constructor(
+    private readonly service: BalancoService
+  ){}
+
+  ngOnInit(): void {
+    this.buscarBalanco();
+  }
+
+  buscarBalanco() {
+    this.service.obterBalanco().subscribe({
+      next: (res) => {
+        console.log(res);
+
+        this.totalVendas = res.totalVendasMes;
+        this.custoTotal = res.totalCustoMes;
+      }
+    });
+  }
 }

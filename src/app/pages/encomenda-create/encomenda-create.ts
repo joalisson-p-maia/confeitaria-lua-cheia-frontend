@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Header } from '../../shared/header/header';
 import { Footer } from '../../shared/footer/footer';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-encomenda-create',
@@ -11,7 +12,8 @@ import { Footer } from '../../shared/footer/footer';
     CommonModule,
     FormsModule,
     Header,
-    Footer
+    Footer,
+    RouterModule
   ],
   templateUrl: './encomenda-create.html',
   styleUrl: './encomenda-create.scss',

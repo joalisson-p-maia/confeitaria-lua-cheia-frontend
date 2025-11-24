@@ -8,8 +8,13 @@
 
     <form (ngSubmit)="salvar()">
 
-      <label>ID da Encomenda:</label>
-      <input type="number" [(ngModel)]="form.encomendaId" name="encomendaId">
+      <label>Nome da Encomenda:</label>
+      <select name="encomendaId" [(ngModel)]="form.encomendaId">
+        <option value="">Selecionar alguma opção</option>
+        @for (encomenda of encomendasLista; track $index) {
+          <option [value]="encomenda._id">{{ encomenda.nome }}</option>
+        }
+      </select>
 
       <label>Quantidade:</label>
       <input type="number" [(ngModel)]="form.quantidade" name="quantidade">
@@ -23,7 +28,7 @@
       <button class="btn">Salvar</button>
     </form>
 
-    <button class="btn__voltar" onclick="return history.back()">Voltar</button>
+    <button class="btn__voltar" [routerLink]="['/vendas']">Voltar</button>
   </main>
   
   <footer>

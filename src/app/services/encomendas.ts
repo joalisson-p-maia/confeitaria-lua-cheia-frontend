@@ -16,7 +16,7 @@ export class EncomendasService {
     return this.http.get<Encomenda[]>(this.api + '/listar');
   }
 
-  obterPorId(id: number): Observable<Encomenda> {
+  obterPorId(id: string): Observable<Encomenda> {
     return this.http.get<Encomenda>(`${this.api}/buscar/${id}`);
   }
 
