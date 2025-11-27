@@ -18,11 +18,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let v of vendas">
-          <td>{{ v.encomendaId }}</td>
-          <td>{{ v.quantidade }}</td>
-          <td>{{ v.data | date }}</td>
-          <td>{{ v.total | currency:'BRL' }}</td>
+        <tr *ngFor="let venda of vendas">
+          <td>{{ venda.itens[0].encomenda.nome }}</td>   
+          <td>{{ venda.itens[0].quantidade }}</td> 
+          <td>{{ venda.dataVenda | date }}</td>
+          <td>{{ venda.total | currency:'BRL' }}</td>
         </tr>
       </tbody>
     </table>
