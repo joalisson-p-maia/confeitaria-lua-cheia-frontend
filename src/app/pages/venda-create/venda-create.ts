@@ -46,6 +46,9 @@ export class VendaCreate implements OnInit{
         setTimeout(() => {
           window.location.href = "/vendas";
         }, 2000);
+      },
+      error: (err) => {
+        console.log(err);
       }
     });
   }
@@ -55,7 +58,10 @@ export class VendaCreate implements OnInit{
       next: (res) => {
         console.log(res);
         this.encomendasLista = res;
+      },
+      error: (err) => {
+        console.log(err);
       }
-    })
+    });
   }
 }
