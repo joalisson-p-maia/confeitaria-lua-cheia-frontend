@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Venda } from '../interfaces/venda.interface';
+import { Venda, VendaCreatePayload } from '../interfaces/venda.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,7 @@ export class VendasService {
     return this.http.get<Venda>(`${this.api}/buscar/${id}`);
   }
 
-  criar(data: Venda): Observable<Venda> {
-    return this.http.post<Venda>(this.api + '/criar', data);
-  }
+  criar(data: VendaCreatePayload): Observable<Venda> { 
+  return this.http.post<Venda>(this.api + '/criar', data);
+}
 }

@@ -5,3 +5,13 @@ export interface Venda {
   data: string;
   total: number;
 }
+
+export interface ItemVendaPayload {
+  encomenda: string;
+  quantidade: number;
+}
+
+export interface VendaCreatePayload {
+  itens: ItemVendaPayload[];
+  cliente?: string;
+}

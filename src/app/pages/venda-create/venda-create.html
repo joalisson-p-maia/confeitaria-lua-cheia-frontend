@@ -9,7 +9,7 @@
     <form (ngSubmit)="salvar()">
 
       <label>Nome da Encomenda:</label>
-      <select name="encomendaId" [(ngModel)]="form.encomendaId">
+      <select name="encomendaId" [(ngModel)]="encomendaSelecionada" required>
         <option value="">Selecionar alguma opção</option>
         @for (encomenda of encomendasLista; track $index) {
           <option [value]="encomenda._id">{{ encomenda.nome }}</option>
@@ -17,13 +17,13 @@
       </select>
 
       <label>Quantidade:</label>
-      <input type="number" [(ngModel)]="form.quantidade" name="quantidade">
+      <input type="number" [(ngModel)]="quantidade" name="quantidade" min="1" required>
 
       <label>Data:</label>
-      <input type="date" [(ngModel)]="form.data" name="data">
+      <input type="date" [(ngModel)]="dataVenda" name="dataVenda" required>
 
       <label>Total:</label>
-      <input type="number" [(ngModel)]="form.total" name="total">
+      <input type="number" [(ngModel)]="totalVenda" name="totalVenda" min="0.01" step="0.01" required>
 
       <button type="submit" class="btn">Salvar</button>
     </form>
@@ -34,4 +34,4 @@
   <footer>
     <app-footer></app-footer>
   </footer>
-</div><!--venda__create__container-->
+</div>

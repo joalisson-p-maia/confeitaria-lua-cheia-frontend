@@ -22,12 +22,11 @@ import { RouterLink } from "@angular/router";
 export class VendaCreate implements OnInit{
   encomendasLista: any = [];
 
-  form = {
-    encomendaId: 0,
-    quantidade: 0,
-    data: new Date().toISOString(),
-    total: 0
-  };
+  encomendaSelecionada: string = ''; 
+  quantidade: number = 1;         
+  cliente: string = '';   
+  dataVenda: string = new Date().toISOString().substring(0, 10);
+  totalVenda: number = 0;        
 
   constructor(
     private service: VendasService,
@@ -39,7 +38,26 @@ export class VendaCreate implements OnInit{
   }
 
   salvar() {
-    this.service.criar(this.form).subscribe({
+    const vendaPayload = {
+      itens: [
+        {
+          encomenda: this.encomendaSelecionada, 
+          quantidade: this.quantidade
+        }
+      ],
+     
+      cliente: '', 
+      
+      total: this.totalVenda, 
+      dataVenda: this.dataVenda
+    };
+    
+    if (!this.encomendaSelecionada || this.quantidade <= 0 || this.totalVenda <= 0) {
+        console.error("Selecione uma encomenda, quantidade e total válidos.");
+        return; 
+    }
+
+    this.service.criar(vendaPayload).subscribe({
       next: (res) => {
         console.log(res);
 
@@ -48,7 +66,7 @@ export class VendaCreate implements OnInit{
         }, 2000);
       },
       error: (err) => {
-        console.log(err);
+        console.log("Erro ao criar venda:", err);
       }
     });
   }
