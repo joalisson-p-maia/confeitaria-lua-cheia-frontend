@@ -24,8 +24,8 @@ export class BalancoParcialMensal implements OnInit{
       next: (res) => {
         console.log(res);
 
-        this.totalVendas = res.totalVendasMes;
-        this.custoTotal = res.totalCustoMes;
+        this.totalVendas = res.total;
+        this.custoTotal = res.custoTotal;
       }
     });
   }
