@@ -20,13 +20,17 @@ export class BalancoParcialMensal implements OnInit{
   }
 
   buscarBalanco() {
-    this.service.obterBalanco().subscribe({
-      next: (res) => {
-        console.log("total: " + res.total);
-        console.log("custo: " +res.custoTotal);
+    const hoje = new Date();
+    const mes = hoje.getMonth() + 1;
+    const ano = hoje.getFullYear();
 
-        this.totalVendas = res.total;
-        this.custoTotal = res.custoTotal;
+    this.service.obterBalanco(mes, ano).subscribe({
+      next: (res) => {
+        console.log("total: " + res.totalVendasMes);
+        console.log("custo: " + res.totalCustoMes);
+
+        this.totalVendas = res.totalVendasMes;
+        this.custoTotal = res.totalCustoMes;
       }
     });
   }
