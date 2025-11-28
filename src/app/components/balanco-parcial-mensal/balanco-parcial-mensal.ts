@@ -26,9 +26,6 @@ export class BalancoParcialMensal implements OnInit{
 
     this.service.obterBalanco(mes, ano).subscribe({
       next: (res) => {
-        console.log("total: " + res.totalVendasMes);
-        console.log("custo: " + res.totalCustoMes);
-
         this.totalVendas = res.totalVendasMes;
         this.custoTotal = res.totalCustoMes;
       }

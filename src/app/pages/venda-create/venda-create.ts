@@ -74,7 +74,6 @@ export class VendaCreate implements OnInit{
   listarEncomendas(){
     this.encomendaService.listar().subscribe({
       next: (res) => {
-        console.log(res);
         this.encomendasLista = res;
       },
       error: (err) => {

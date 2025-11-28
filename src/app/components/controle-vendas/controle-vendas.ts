@@ -25,7 +25,6 @@ export class ControleVendas implements OnInit{
 
     this.service.listarPorMes(mesAtual, anoAtual).subscribe({
       next: (res) => {
-        console.log(res);
         this.quantidadeVendaMes = res.length;
       }
     });

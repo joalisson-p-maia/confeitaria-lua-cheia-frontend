@@ -30,7 +30,6 @@ export class EncomendaCreate {
   salvar() {
     this.service.criar(this.form).subscribe({
       next: (res) => {
-        console.log(res);
 
         setTimeout(() => {
           window.location.href = "/encomendas";

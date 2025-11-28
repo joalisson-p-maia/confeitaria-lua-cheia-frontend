@@ -26,8 +26,6 @@ export class VendaList {
   ngOnInit(): void {
     this.service.listar().subscribe({
       next: (res) => {
-        console.log(res);
-
         this.vendas = res;
       }
     });

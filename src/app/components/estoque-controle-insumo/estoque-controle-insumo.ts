@@ -26,8 +26,6 @@ export class EstoqueControleInsumo implements OnInit{
   obterListaEstoque(){
     this.service.obterEstoque().subscribe({
       next: (res) => {
-        console.log(res);
-
         this.insumosLista = res;
         this.validarQuatroInsumosEmBaixa();
       },

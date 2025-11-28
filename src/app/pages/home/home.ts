@@ -1,4 +1,3 @@
-import { ControleInsumo } from './../../components/controle-insumo/controle-insumo';
 import { ControleVendas } from './../../components/controle-vendas/controle-vendas';
 import { EstoqueControleInsumo } from './../../components/estoque-controle-insumo/estoque-controle-insumo';
 import { BalancoParcialMensal } from './../../components/balanco-parcial-mensal/balanco-parcial-mensal';
@@ -17,7 +16,6 @@ import { Footer } from '../../shared/footer/footer';
     EstoqueControleInsumo,
     BalancoParcialMensal,
     EstoqueControleInsumo,
-    ControleInsumo,
     Footer,
     ControleVendas
   ],

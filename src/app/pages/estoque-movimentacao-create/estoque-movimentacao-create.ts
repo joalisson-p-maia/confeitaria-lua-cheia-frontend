@@ -35,8 +35,6 @@ export class EstoqueMovimentacaoCreate {
   ngOnInit(): void {
     this.InsumoService.listar().subscribe({
       next: (res) => {
-        console.log(res);
-
         this.listaInsumos = res;
       }
     });
@@ -45,8 +43,6 @@ export class EstoqueMovimentacaoCreate {
   salvar() {
     this.service.registrarMovimentacao(this.form).subscribe({
       next: (res) => {
-        console.log(res);
-
         setTimeout(() => {
           window.location.href = "/estoque";
         }, 2000);

@@ -23,7 +23,6 @@ export class InsumoList {
 
   ngOnInit(): void {
     this.service.listar().subscribe(res => {
-      console.log(res);
       this.insumos = res
     });
   }
